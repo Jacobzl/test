@@ -22,7 +22,7 @@ mybatis:
 cacheType: redis
     
 zhiyang:
-  uploadPath: /pre
+  uploadPath: /home/images/merchant_admin/
 logging:
   level:
     com.zhiyang: debug
