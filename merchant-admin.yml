@@ -1,0 +1,42 @@
+server:
+    # context-path: /myboot 
+    session-timeout: 1800
+#    tomcat:
+#        max-threads: 1000
+#        min-spare-threads: 30
+    port: 8020
+#    uri-encoding: utf-8
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://user:123456@localhost:8761/eureka/
+
+management:
+  context-path: /actuator
+  security:
+    enabled: false
+
+spring:
+  application:
+    name: merchant-admin
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+#  profiles: 
+#    active: dev
+  devtools:
+    restart:
+      enabled: true    
+mybatis: 
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath*:mybatis/**/*Mapper.xml
+  typeAliasesPackage: classpath*:com.ssyt.**.domain
+#配置缓存和session存储方式，默认ehcache,可选redis
+cacheType: redis
