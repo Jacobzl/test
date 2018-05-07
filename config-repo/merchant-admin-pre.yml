@@ -14,6 +14,11 @@ security:
   basic:
     enabled: false
 
+management:
+  context-path: /actuator
+  security:
+    enabled: false
+
 mybatis: 
   configuration:
     map-underscore-to-camel-case: true
