@@ -4,7 +4,7 @@ server:
 #    tomcat:
 #        max-threads: 1000
 #        min-spare-threads: 30
-    port: 8020
+#    port: 8020
 #    uri-encoding: utf-8
 
 eureka:
@@ -20,8 +20,8 @@ management:
     enabled: false
 
 spring:
-  application:
-    name: merchant-admin
+#  application:
+#    name: merchant-admin
   thymeleaf:
     mode: LEGACYHTML5
     cache: false
