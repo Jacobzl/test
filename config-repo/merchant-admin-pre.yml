@@ -3,18 +3,10 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://user:123456@localhost:8761/eureka/
+      defaultZone: http://user:123456@192.168.10.9:8761/eureka/
 security:
   basic:
     enabled: false
-
-mybatis: 
-  configuration:
-    map-underscore-to-camel-case: true
-  mapper-locations: classpath*:mybatis/**/*Mapper.xml
-  typeAliasesPackage: classpath*:com.ssyt.**.domain
-#配置缓存和session存储方式，默认ehcache,可选redis
-cacheType: redis
     
 zhiyang:
   uploadPath: /home/images/merchant_admin/
@@ -22,15 +14,6 @@ logging:
   level:
     com.zhiyang: debug
 spring:
-  thymeleaf:
-    mode: LEGACYHTML5
-    cache: false
-  jackson:
-    time-zone: GMT+8
-    date-format: yyyy-MM-dd HH:mm:ss
-  devtools:
-    restart:
-      enabled: true   
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
@@ -64,7 +47,7 @@ spring:
       port: 6379
       timeout: 300
       password: 123456
-      database: 2
+      database: 1
       pool:
         # 连接池中的最大空闲连接
         max-idle: 8
@@ -119,8 +102,8 @@ api:
     currencyUrl: http://192.168.10.46:9999/zg/currency/all
     wealthUrl: http://192.168.10.46:9999/zg/account/wealth
     billUrl: http://192.168.10.46:9999/zg/bill/page
-    billDetailUrl: http://192.168.10.46:9999/zg/bill/detail
     billCommissionDetailUrl: http://192.168.10.46:9999/zg/commission/page
+    billDetailUrl: http://192.168.10.46:9999/zg/bill/detail
     shopTotalProfitByShopsNoUrl: http://192.168.10.46:9999/zg/bill/shop/findProfitByShopNo
     shopTotalProfitByAccountNoUrl: http://192.168.10.46:9999/zg/bill/shop/findProfit
     findProfitUrl: http://192.168.10.46:9999/zg/bill/shop/findProfit
@@ -150,4 +133,3 @@ constants:
 uploadServer: 
   uploadFileUrl: http://192.168.10.9:8050/filesUploadForWangEditor
   viewFileUrl: http://192.168.10.9:8050/ 
-        
