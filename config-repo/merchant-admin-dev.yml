@@ -22,8 +22,6 @@ logging:
   level:
     com.zhiyang: debug
 spring:
-  profiles:
-    active: dev
   thymeleaf:
     mode: LEGACYHTML5
     cache: false
