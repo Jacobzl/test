@@ -9,8 +9,14 @@ eureka:
   client:
     service-url:
       defaultZone: http://user:123456@localhost:8761/eureka/
+
 security:
   basic:
+    enabled: false
+
+management:
+  context-path: /actuator
+  security:
     enabled: false
 
 mybatis: 
