@@ -152,5 +152,5 @@ constants:
 
 #文件服务器地址
 uploadServer: 
-  uploadFileUrl: http://192.168.10.9:8050/filesUploadForWangEditor
-  viewFileUrl: http://192.168.10.9:8050/ 
+  uploadFileUrl: http://192.168.10.9:8050/filesUploadForWangEditor/test
+  viewFileUrl: http://192.168.10.9:8050/test 
