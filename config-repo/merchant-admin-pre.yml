@@ -108,7 +108,7 @@ spring:
 customer:  
   cacheType: redis  #配置缓存和session存储方式，默认ehcache,可选redis    
   zhiyang:
-    uploadPath: /home/images/merchant_admin/test
+    uploadPath: /home/images/merchant_admin/testa
   cipher:
     aeskey: 54B288D8F8F1E2C6CB203B92F25E8B3E
     keyAlgorithm: AES
