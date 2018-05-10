@@ -154,5 +154,5 @@ customer:
       pushShopsDataUrl: http://192.168.10.6/seller/action/registerStore
       pushShopsStatusUrl: http://192.168.10.6/seller/action/updateState
       pushOverdueTimeUrl: http://192.168.10.6/seller/action/renewStore
-      addSelfStore: http://192.168.10.6/seller/action/addSelfStore
-      updateSelfStore: http://192.168.10.6/seller/action/updateSelfStore
+      addSelfStore: http://192.168.31.198:8001/seller/action/addSelfStore
+      updateSelfStore: http://192.168.31.198:8001/seller/action/updateSelfStore
