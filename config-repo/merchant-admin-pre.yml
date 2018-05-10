@@ -2,7 +2,7 @@
 server:
   port: 8020
   session:
-    timeout: 1800
+    timeout: 20
 
 eureka:
   instance:
