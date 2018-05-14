@@ -3,6 +3,9 @@ server:
   port: 8020
   session:
     timeout: 1800
+	
+encrypt:
+  key: ssyt123456
 
 eureka:
   instance:
