@@ -43,12 +43,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-#    url: jdbc:mysql://192.168.50.235:3306/merchant?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
-#    username: ssytweb
-#    password: ssyt123456
-    url: jdbc:mysql://localhost:3306/merchant?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
-    username: root
-    password: 654321
+    url: jdbc:mysql://192.168.10.52:8066/merchant?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
+    username: ssytweb
+    password: {cipher}ssyt123456
     initialSize: 1
     minIdle: 3
     maxActive: 20
