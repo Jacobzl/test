@@ -46,9 +46,9 @@ spring:
 #    url: jdbc:mysql://192.168.50.235:3306/merchant?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
 #    username: ssytweb
 #    password: ssyt123456
-    url: jdbc:mysql://192.168.50.235:3306/merchant?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
+    url: jdbc:mysql://localhost:3306/merchant?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
     username: root
-    password: 123456
+    password: 654321
     initialSize: 1
     minIdle: 3
     maxActive: 20
