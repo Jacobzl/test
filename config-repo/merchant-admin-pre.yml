@@ -3,7 +3,6 @@ server:
   port: 8020
   session:
     timeout: 1800
-	
 
 eureka:
   instance:
