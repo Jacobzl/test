@@ -4,8 +4,6 @@ server:
   session:
     timeout: 1800
 	
-encrypt:
-  key: ssyt123456
 
 eureka:
   instance:
