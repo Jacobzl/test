@@ -1,15 +1,8 @@
-#--------------------------------分隔线  spring标准配置信息 --------------------------------
+#--------------------------------分隔线  spring标准配置 --------------------------------
 server:
   port: 8020
   session:
     timeout: 1800
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://user:123456@localhost:8761/eureka/
 
 security:
   basic:
@@ -43,12 +36,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/merchant?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
-    username: root
-    password: 654321
-#    url: jdbc:mysql://192.168.10.52:8066/merchant?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
-#    username: ssytweb
-#    password: ssyt123456 
+    url: jdbc:mysql://192.168.10.52:8066/merchant?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
+    username: ssytweb
+    password: ssyt123456 
     initialSize: 1
     minIdle: 3
     maxActive: 20
@@ -107,8 +97,9 @@ spring:
 #          enabled: true
 
 
-#-----------------------------分隔线  自定义配置信息  --------------------------------
-customer:  
+#-----------------------------分隔线  自定义配置  --------------------------------
+custom:
+  profile: pre
   cacheType: redis  #配置缓存和session存储方式，默认ehcache,可选redis    
   zhiyang:
     uploadPath: /home/images/merchant_admin/
@@ -121,9 +112,12 @@ customer:
     recommendUserId: 10 #后台创建店铺，临时写死的推荐人id,经营人id,代理id  
     userId: 10
     agentId: 5
+  sso:
+    profiles:
+      active: pre
   uploadServer: 
     uploadFileUrl: http://192.168.10.9:8050/filesUploadForWangEditor #文件服务器地址
-    viewFileUrl: http://192.168.10.9:8050/ 
+    viewFileUrl: http://192.168.10.9:8050/
   mail:
     #QQ邮件服务地址 
     host: smtp.qq.com
@@ -153,6 +147,7 @@ customer:
       cgjTradeDetailUrl: http://192.168.10.46:9999/zg/trade/currency/page
       cashOutToZiGuanUrl: http://192.168.10.46:9999/zg/trade/wallet/record
       updateCashOutToZiGuanUrl: http://192.168.10.46:9999/zg/trade/wallet/update
+      pushPurseAccountToZiGuanUrl: http://192.168.10.46:9999/zg/account/sync/lianlian
     mall:
       pushShopsDataUrl: http://192.168.10.6/seller/action/registerStore
       pushShopsStatusUrl: http://192.168.10.6/seller/action/updateState
